@@ -8,7 +8,7 @@
     <properties>
 
 		<!-- Generic properties -->
-		<java.version>1.6</java.version>
+		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		
@@ -19,7 +19,7 @@
 		
 
 		<!-- Spring -->
-		<spring-framework.version>3.2.3.RELEASE</spring-framework.version>
+		<spring-framework.version>4.3.6.RELEASE</spring-framework.version>
 
 		<!-- Hibernate / JPA -->
 		<hibernate.version>4.2.1.Final</hibernate.version>
@@ -32,9 +32,53 @@
 		<junit.version>4.11</junit.version>
 
 	</properties>
-	
+		<!-- 여기랑 -->
+		<!-- 오라클 JDBC 드라이버를 가져오기 위해 리포지토리를 추가합니다. -->
+		<repositories>
+		  <repository>
+		   <id>oracle</id>
+		   <url>http://maven.jahia.org/maven2</url>
+		  </repository>
+		 </repositories>
+		 <!-- 여기까지 -->
 	<dependencies>
-	
+		<!-- 여기서부터 -->
+		<!-- mybatis-spring-->
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis-spring</artifactId>
+		    <version>1.3.0</version>
+		</dependency>
+		
+		<!--mybatis-->
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>3.4.2</version>
+		</dependency>
+				
+		<!-- 오라클 JDBC 드라이버 -->
+		<dependency>
+		    <groupId>com.oracle</groupId>
+		    <artifactId>ojdbc6</artifactId>
+		    <version>12.1.0.2</version>
+		</dependency>
+		<!--dbcp--> 		
+		<!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
+		<dependency>
+		    <groupId>commons-dbcp</groupId>
+		    <artifactId>commons-dbcp</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>4.3.6.RELEASE</version>
+		</dependency>
+		<!-- 여기까지 -->
 		<!-- Spring MVC -->
 		<dependency>
 			<groupId>org.springframework</groupId>
